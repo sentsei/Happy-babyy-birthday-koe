@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="hearts-container"></div>
+    <div id="confetti-container"></div>
+
+    <div class="container">
+        <section id="page-1" class="page active">
+            <div class="card lock-card heart-theme">
+                <div class="heart-lock">💝</div>
+                <h2>Secret Box</h2>
+                <p>may pin ito para bukasn</p>
+                <div class="pin-display">
+                    <input type="password" id="pin-input" readonly placeholder="••••">
+                </div>
+                <div class="keypad">
+                    <button onclick="pressKey('1', event)">1</button>
+                    <button onclick="pressKey('2', event)">2</button>
+                    <button onclick="pressKey('3', event)">3</button>
+                    <button onclick="pressKey('4', event)">4</button>
+                    <button onclick="pressKey('5', event)">5</button>
+                    <button onclick="pressKey('6', event)">6</button>
+                    <button onclick="pressKey('7', event)">7</button>
+                    <button onclick="pressKey('8', event)">8</button>
+                    <button onclick="pressKey('9', event)">9</button>
+                    <button onclick="clearPin(event)" class="btn-clear">C</button>
+                    <button onclick="pressKey('0', event)">0</button>
+                    <button onclick="checkPin(event)" class="btn-enter">✔</button>
+                </div>
+                <p id="error-msg" class="error-text"></p>
+            </div>
+        </section>
+
+        <section id="page-2" class="page">
+            <div class="card hbd-card">
+                <div class="floating-cake">🎂</div>
+                <h1 class="glow-text">Happy Birthday!</h1>
+                <h2 class="celebrant-name">our baby kaoeee ❤️</h2>
+                <p class="subtext">this is the day you've born little princess.</p>
+            </div>
+        </section>
+
+        <section id="page-3" class="page">
+            <div class="card letter-card">
+                <h2 class="title-special">Liham Para Sayo</h2>
+                <div class="letter-content">
+                    <p>Mahal kong KOEEE,</p>
+                    <p>Gusto ko lang sabihin na Happy Happy Birthday! sobrang thankful ako na dumating ka sa buhay ko/namin naging masaya at maganda ang araw mong ito. sa Bawat tawa at bonding natin ay hinding-hindi ko makakalimutan.</p>
+                    <p>Sana laging kang masaya at healthy. Nandito lang ako/kami lagi para suportahan ka sa lahat ng pangarap mo. Huwag kang magbabago ha?</p>
+                    <p>Ikaw ang sunshine namin at aking pangarap. Enjoy your day! love :></p>
+                    <p class="signature">Nagmamahal, SENSEI</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-4" class="page">
+            <div class="card wishes-card">
+                <h2 class="title-special">MENSAHE NG HELIX KIN ✨</h2>
+                <div class="wishes-grid">
+                    <div class="wish-box">
+                        <p>"More blessings and more birthdays to come! Stay humble and kind."</p>
+                        <span>- mickey</span>
+                    </div>
+                    <div class="wish-box">
+                        <p>"Sana lahat ng goals mo ngayong taon ay matupad mo na. Labyu!"</p>
+                        <span>- kochie</span>
+                    </div>
+                    <div class="wish-box">
+                        <p>"Good health at masaganang buhay para sayo at sa family mo."</p>
+                        <span>- madam/athena</span>
+                    </div>
+                    <div class="wish-box">
+                        <p>"Stay as pretty/handsome as you are! Cheers to more gala!"</p>
+                        <span>- papajay</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="nav-controls" class="nav-container hidden">
+            <button id="prev-btn" onclick="navigatePage(-1)">Back</button>
+            <div class="page-indicator"><span id="current-step">1</span> / 3</div>
+            <button id="next-btn" onclick="navigatePage(1)">Next</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
